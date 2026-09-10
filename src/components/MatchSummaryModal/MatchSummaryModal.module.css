@@ -1,0 +1,192 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  animation: scaleUp 0.3s var(--transition-bounce);
+  padding: 1.5rem;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.celebrationHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.trophy {
+  font-size: 3rem;
+  line-height: 1;
+  animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.winnerHeading {
+  font-family: var(--font-family-brand);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.formatSubtitle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.scoreBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 1rem;
+}
+
+.playerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerName {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.scoreNumber {
+  font-family: var(--font-family-brand);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.scoreDivider {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.statItem {
+  background-color: var(--color-surface-secondary);
+  padding: 0.625rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.statValue {
+  font-family: var(--font-family-brand);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.primaryBtn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-brand);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+  transition: all var(--transition-fast);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  width: 100%;
+  background-color: var(--color-surface-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-family-brand);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.625rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.outlineBtn {
+  width: 100%;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.outlineBtn:hover {
+  color: var(--color-text);
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
